@@ -1,0 +1,13 @@
+#!name=Trakt Upsell Remover
+#!desc=Remove Trakt VIP upsell locally
+#!author=DaVinci42
+#!icon=https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/trakt.png
+#!homepage=https://github.com/DaVinci42/LoonPlugins
+#!date=2026-07-24 20:11
+#!version=1.1.0
+
+[Script]
+http-response ^https?:\/\/apiz\.trakt\.tv\/users\/settings script-path=https://raw.githubusercontent.com/DaVinci42/LoonPlugins/main/trakt/trakt.js,requires-body=true,tag=Trakt Upsell Remover,enable=true
+
+[MITM]
+hostname = apiz.trakt.tv
