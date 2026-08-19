@@ -1,0 +1,14 @@
+#!name=Maimai Cleaner
+#!desc=Clean Maimai feeds and open the colleague tab by default
+#!author=DaVinci42
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/MaiMai.png
+#!homepage=https://github.com/DaVinci42/LoonPlugins
+#!date=2026-08-20 14:36
+#!version=1.3.1
+
+[Script]
+http-response ^https?:\/\/h3\.open\.taou\.com\/maimai\/gossip\/v3\/company_circle_feeds(?:\?|$) script-path=https://raw.githubusercontent.com/DaVinci42/LoonPlugins/main/maimai/maimai.js,requires-body=true,tag=Maimai Feed Cleaner,enable=true
+http-response ^https?:\/\/h3\.api\.taou\.com\/sdk\/global\/config(?:\?|$) script-path=https://raw.githubusercontent.com/DaVinci42/LoonPlugins/main/maimai/maimai.js,requires-body=true,tag=Maimai Default Colleague Tab,enable=true
+
+[MITM]
+hostname = h3.open.taou.com, h3.api.taou.com
