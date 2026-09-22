@@ -11,7 +11,8 @@ if (Array.isArray(obj.data)) {
     const isAd = item.type === "ad_show" || Boolean(item.newAdStyle);
     const hiddenCardTypes = [
       "company_circle_one_key_publish_card",
-      "wish_cards_album"
+      "wish_cards_album",
+      "team_checkin_activity"
     ];
     const isNoticeEntrance = item.card_type === "notice_entrance";
     return !isAd && !isNoticeEntrance && !hiddenCardTypes.includes(item.card_type);

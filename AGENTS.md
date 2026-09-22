@@ -4,9 +4,10 @@
 
 This repo contains Loon plugins. Keep each plugin in its own top-level directory with its `.plugin` manifest and referenced script together.
 
-Current plugin:
+Current plugins:
 
 - `trakt/`: modifies Trakt settings responses for "Trakt Upsell Remover".
+- `maimai/`: cleans colleague feeds and opens the colleague tab by default.
 
 ## Commands
 
@@ -14,6 +15,7 @@ No project build/test/lint setup exists. Use syntax checks for edited JavaScript
 
 ```sh
 node --check trakt/trakt.js
+node --check maimai/maimai.js
 ```
 
 Scripts rely on Loon globals such as `$response` and `$done`, so they are not directly runnable in Node without a harness.
@@ -38,3 +40,4 @@ Scripts rely on Loon globals such as `$response` and `$done`, so they are not di
 
 - Loon runtime APIs (`$response`, `$done`) are intentional; do not replace them with Node/browser APIs.
 - The current Trakt plugin targets `apiz.trakt.tv`, not `api.trakt.tv`.
+- Maimai's `data[].card_type` value `team_checkin_activity` identifies the team check-in prize promotion. Preserve pagination metadata when filtering feed cards.
