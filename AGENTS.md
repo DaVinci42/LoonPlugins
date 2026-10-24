@@ -6,7 +6,7 @@ This repo contains Loon plugins. Keep each plugin in its own top-level directory
 
 Current plugins:
 
-- `trakt/`: modifies Trakt settings responses for "Trakt Upsell Remover".
+- `trakt/`: modifies Trakt settings responses for "Trakt Upsell Remover" and clears following activity feeds.
 - `maimai/`: cleans colleague feeds and opens the colleague tab by default.
 
 ## Commands
